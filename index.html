@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To Do List</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    
+<h1 id ="promptname"></h1>
+    <body class="container bg-secondary text-light text-center">
+        <br>
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="new-start-date">Start Date</label>
+                            <input type="date" class="form-control" id="start-date">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="new-end-date">Due Date</label>
+                            <input type="date" class="form-control" id="end-date">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="new-task">Task</label>
+                            <input type="text" class="form-control" id="new-task" placeholder="Task">
+                        </div>
+                    </div>
+                </div>
+                <button id="add" class="btn btn-primary form-control">Create</button>
+                
+                <table id="list" class="table table-sm table-light table-hover">
+                    <tr>
+                        <th>Task</th>
+                        <th>Creation Date</th>
+                        <th>Start Date</th>
+                        <th>Due Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </table>
+    
+    
+        </div>
+    <script src="index.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>   
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
