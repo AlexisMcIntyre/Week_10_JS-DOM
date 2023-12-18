@@ -3,52 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My To Do List</title>
+    <title>My Birthday Planning List</title>
+
+    <!--Here I link to the CSS bootstrap stylesheet-->
+
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-    
+
+ <!-- This line references the promptname id in the JS file.  -->
+
 <h1 id ="promptname"></h1>
+
+<!--Here the bootstrap container is utilized with the "secondary" background and light, centered text.-->
+
     <body class="container bg-secondary text-light text-center">
         <br>
+
+<!--Here the card class is utilized to give a styled effect. The card has 2 rows; the first row has 2 small columns within it and the second row only has 1. The class "form-group" is used to group form elements more neatly. I used the appropriate input type (text for name and date for numbers) and "form-control" to have the elements size themselves appropriately in the form. They were each given a unique id to reference in the JS file. -->
+
         <div class="card">
             <div class="card-body">
+                <h2>Enter birthdays:</h2>
                 <div class="row">
                     <div class="col-sm">
                         <div class="form-group">
-                            <label for="new-start-date">Start Date</label>
-                            <input type="date" class="form-control" id="start-date">
+                            <label for="new-birth-date">Birthday</label>
+                            <input type="date" class="form-control" id="new-birth-date">
                         </div>
                     </div>
                     <div class="col-sm">
                         <div class="form-group">
-                            <label for="new-end-date">Due Date</label>
-                            <input type="date" class="form-control" id="end-date">
+                            <label for="new-individual">Individual</label>
+                            <input type="text" class="form-control" id="new-individual" placeholder="Name">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm">
                         <div class="form-group">
-                            <label for="new-task">Task</label>
-                            <input type="text" class="form-control" id="new-task" placeholder="Task">
+                            <label for="new-gift">Gift(s)</label>
+                            <input type="text" class="form-control" id="new-gift" placeholder="Gift Ideas">
                         </div>
                     </div>
                 </div>
-                <button id="add" class="btn btn-primary form-control">Create</button>
-                
+                <button id="add" class="btn btn-lg btn-primary m-2">Create</button>
+
+                <h2>Birthday List:</h2>
+
+<!--Here I create a simple table with compact cells and a light theme that darkens rows as you hover over them.
+-->
                 <table id="list" class="table table-sm table-light table-hover">
                     <tr>
-                        <th>Task</th>
-                        <th>Creation Date</th>
-                        <th>Start Date</th>
-                        <th>Due Date</th>
+                        <th>Birthday</th>
+                        <th>Individual</th>
+                        <th>Gift</th>
+                        <th>Created</th>
                         <th>Actions</th>
                     </tr>
                 </table>
     
     
         </div>
+
+    <!--Here I link to the JS document as well as various node modules to be called on for use on the page.-->
+
     <script src="index.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>   
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
